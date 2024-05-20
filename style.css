@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #08649c;
+    --secondary-color: #267b90;
+    --accent-color: #08649c;
+    --hover-accent-color: #0056b3;
+    --neutral-light: #f5f5f5;
+    --neutral-dark: #888;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--neutral-light);
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    z-index: 9999;
+    border-radius: 25px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-family);
+}
+
+.titleBar {
+    display: flex;
+    justify-content: space-between;
+    cursor: move;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.titleBar span, .minimizeButton {
+    color: #fff;
+}
+
+.minimizeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 30px;
+    transition: color 0.3s;
+}
+
+.usernameInput, 
+.genderSelect {
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: var(--font-family);
+    transition: border-color 0.3s;
+}
+
+.usernameInput:hover, .usernameInput:focus, 
+.genderSelect:hover, .genderSelect:focus {
+    border-color: var(--accent-color);
+}
+
+.fetchButton, 
+.changeButton {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fetchButton:hover, .changeButton:hover,
+.fetchButton:focus, .changeButton:focus {
+    background-color: var(--hover-accent-color);
+}
+
+.creditSpan {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: var(--neutral-dark);
+}
+
+.inputContainer, 
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}

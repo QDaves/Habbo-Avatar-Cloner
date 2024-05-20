@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "manifest_version": 3,
+   "name": "Habbo Avatar Clone, Effect without Avatar",
+   "version": "1.0.3",
+   "description": "Habbo Avatar Clone, Effect without Avatar",
+   "permissions": ["storage"],
+   "content_scripts": [
+      {
+         "matches": [
+            "https://www.habbo.com/*",
+            "https://www.habbo.com.br/*",
+            "https://www.habbo.com.tr/*",
+            "https://www.habbo.fi/*",
+            "https://www.habbo.nl/*",
+            "https://www.habbo.es/*",
+            "https://www.habbo.de/*",
+            "https://www.habbo.it/*",
+            "https://www.habbo.fr/*"
+         ],
+         "js": ["contentScript.js"],
+         "css": ["style.css"],
+         "run_at": "document_end"
+      }
+   ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+   }
+}
